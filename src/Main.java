@@ -1,6 +1,11 @@
+import static spark.Spark.*;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, Student! Application running on port 8081");
-      
+
+        port(8081);
+
+        get("/", (req, res) -> "Hello, Student! Application running on port 8081");
+
     }
 }
